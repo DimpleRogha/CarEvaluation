@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Futuristic Car Evaluation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-box">
+        <div class="container form-section">
+            <h1>🚗 Car Evaluation</h1>
+            <form action="/predict" method="post">
+                <div class="form-group">
+                    <label>Buying Price</label>
+                    <select name="buying">
+                        <option value="vhigh">Very High</option>
+                        <option value="high">High</option>
+                        <option value="med">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Maintenance</label>
+                    <select name="maint">
+                        <option value="vhigh">Very High</option>
+                        <option value="high">High</option>
+                        <option value="med">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Doors</label>
+                    <select name="doors">
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5more">5+</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Passengers</label>
+                    <select name="persons">
+                        <option value="2">2</option>
+                        <option value="4">4</option>
+                        <option value="more">More</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Luggage Boot</label>
+                    <select name="lug_boot">
+                        <option value="small">Small</option>
+                        <option value="med">Medium</option>
+                        <option value="big">Big</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Safety</label>
+                    <select name="safety">
+                        <option value="low">Low</option>
+                        <option value="med">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+
+                <button type="submit">Predict</button>
+            </form>
+        </div>
+
+        <div class="container result-section">
+            <h2 class="result-title">🔮 Prediction</h2>
+            {% if prediction_text %}
+                <div class="result-box">
+                    <h2>{{ prediction_text }}</h2>
+                </div>
+            {% else %}
+                <p class="placeholder-text">Your prediction will appear here after you submit the form.</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

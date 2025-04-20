@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-box {
+    display: flex;
+    gap: 30px;
+    width: 900px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border-radius: 20px;
+    padding: 30px;
+    flex: 1;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+h1, h2 {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00ffe7;
+    color: #00ffe7;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #dddddd;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid #ffffff30;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Fix for dropdown options */
+select option {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+button {
+    width: 100%;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    background: #00ffe7;
+    color: #111;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: #0ff;
+    box-shadow: 0 0 15px #00ffe7;
+}
+
+.result-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-title {
+    margin-bottom: 10px;
+}
+
+.result-box {
+    background: rgba(0, 255, 231, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #00ffe7;
+    box-shadow: 0 0 15px #00ffe7;
+    text-align: center;
+    font-size: 18px;
+}
+
+.placeholder-text {
+    font-size: 15px;
+    color: #bbbbbb;
+    text-align: center;
+    opacity: 0.7;
+}
